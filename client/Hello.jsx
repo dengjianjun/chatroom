@@ -1,7 +1,10 @@
+const { RaisedButton } = mui;
 Hello = React.createClass({
-  render() {
+  render(){
     return (
-      <div>Hello World</div>
+      <div> 
+        <RaisedButton label="Hello World" primary={true} />
+      </div>
     );
   }
 });

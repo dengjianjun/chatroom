@@ -1,8 +1,8 @@
-Home = React.createClass({
+LogIn = React.createClass({
   render(){
     return (
       <div> 
-        <p>Home</p>
+        <p>LogIn</p>
       </div>
     );
   }

@@ -1,11 +1,12 @@
 const {
   Router,
-  Route
+  Route,
+  browserHistory
 } = ReactRouter;
 
 Meteor.startup(function(){
 	ReactDOM.render((
-		<Router>
+		<Router history={browserHistory}>
 		  <Route path="/" component={Home} />
 		  <Route path="/signup" component={SignUp} />
 		</Router>

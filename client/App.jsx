@@ -7,10 +7,14 @@ App = React.createClass({
     setNavBarState();
     window.onresize = setNavBarState;
   },
+  _onLeftIconButtonTouchTap(){
+    this.refs.leftNav.handleToggle();
+  },
 	render() {
 		return(
 			<div>
-        {this.state.renderNavBar?<NavBar />:<AppBar />}
+        {this.state.renderNavBar?<NavBar />:<AppBar onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}/>}
+        <AppLeftNav ref="leftNav" />
         <br />
         {this.props.children}
 			</div>
